@@ -33,4 +33,13 @@ public class FuncionarioService {
 
         throw new ClienteNaoEncontradoException("Funionario não encontrado");
     }
+
+    public void removerFuncionarioDaLista(String nome){
+        FuncionarioDto funcionarioDto = null;
+        for (FuncionarioDto retorno: listaFuncionario){
+            if (retorno.getNome().equals( nome )){
+                listaFuncionario.remove( funcionarioDto );
+            }
+        }
+    }
 }

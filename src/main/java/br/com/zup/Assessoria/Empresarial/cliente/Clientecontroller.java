@@ -32,4 +32,10 @@ public class Clientecontroller {
 
     }
 
+
+    @DeleteMapping("/{nome}")
+    public void removerClientePorNome(@PathVariable String nome){
+        clienteService.removerClinteDaLista( nome );
+    }
+
 }

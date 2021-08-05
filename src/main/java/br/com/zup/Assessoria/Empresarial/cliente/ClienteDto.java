@@ -1,6 +1,7 @@
 package br.com.zup.Assessoria.Empresarial.cliente;
 
 import br.com.zup.Assessoria.Empresarial.pessoa.Pessoa;
+import br.com.zup.Assessoria.Empresarial.servico.ServicoDto;
 
 import javax.validation.constraints.NotBlank;
 
@@ -12,6 +13,8 @@ public class ClienteDto extends Pessoa {
 
     @NotBlank
     private String funcionarioResponsavel;
+
+    private ServicoDto servico;
 
 
     public ClienteDto(String nome, String endereco, String email, String telefone, Atividade atividade,

@@ -33,5 +33,14 @@ public class ClienteService {
         throw new ClienteNaoEncontradoException("Cliente não encontrado");
     }
 
+    public void removerClinteDaLista(String nome){
+        ClienteDto clienteDto = null;
+        for (ClienteDto retorno: listaCliente){
+            if (retorno.getNome().equals( nome )){
+                listaCliente.remove( clienteDto );
+            }
+        }
+    }
+
 
 }
