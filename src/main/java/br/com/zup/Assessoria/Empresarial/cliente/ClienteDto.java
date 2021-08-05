@@ -14,7 +14,8 @@ public class ClienteDto extends Pessoa {
     private String funcionarioResponsavel;
 
 
-    public ClienteDto(String nome, String endereco, String email, String telefone, Atividade atividade, String descricao, String funcionarioResponsavel) {
+    public ClienteDto(String nome, String endereco, String email, String telefone, Atividade atividade,
+                      String descricao, String funcionarioResponsavel) {
         super( nome, endereco, email, telefone );
         this.atividade = atividade;
         this.descricao = descricao;
