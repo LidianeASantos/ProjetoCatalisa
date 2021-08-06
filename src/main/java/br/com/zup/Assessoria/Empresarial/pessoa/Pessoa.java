@@ -5,16 +5,16 @@ import javax.validation.constraints.NotBlank;
 
 public class Pessoa {
 
-    @NotBlank
+    @NotBlank(message = "{validacao.nome}")
     private String nome;
 
-    @NotBlank
+    @NotBlank(message = "{validacao.endereco}")
     private String endereco;
 
-    @Email
+    @Email(message = "{validacao.email}")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "{validacao.telefone}")
     private String telefone;
 
     public Pessoa() {

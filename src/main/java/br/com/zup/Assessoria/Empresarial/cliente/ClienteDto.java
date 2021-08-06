@@ -11,7 +11,7 @@ public class ClienteDto extends Pessoa {
 
     private String descricao;
 
-    @NotBlank
+    @NotBlank(message = "{validacao.funcionarioResponsave}")
     private String funcionarioResponsavel;
 
 
