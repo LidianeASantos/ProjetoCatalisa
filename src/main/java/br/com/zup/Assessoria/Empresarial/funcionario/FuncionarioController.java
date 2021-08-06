@@ -1,6 +1,7 @@
 package br.com.zup.Assessoria.Empresarial.funcionario;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ public class FuncionarioController {
 
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public List<FuncionarioDto> cadastrarCliente(@RequestBody @Valid FuncionarioDto funcionarioDto){
         funcionarioService.adicionarFuncionarioNaLista( funcionarioDto );
         return funcionarioService.retornarFuncionario();

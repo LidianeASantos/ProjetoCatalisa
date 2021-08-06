@@ -1,21 +1,30 @@
 package br.com.zup.Assessoria.Empresarial.servico;
 
+import br.com.zup.Assessoria.Empresarial.cliente.ClienteDto;
+
 public class ServicoDto {
 
-    private ServicoEnum nomeServico;
+    private Servico nome;
 
     private double valorServico;
 
-    public ServicoDto(ServicoEnum nomeServico) {
-        this.nomeServico = nomeServico;
+    private ClienteDto cliente;
+
+    public ServicoDto() {
     }
 
-    public ServicoEnum getNomeServico() {
-        return nomeServico;
+    public ServicoDto(Servico nome, double valorServico, ClienteDto cliente) {
+        this.nome = nome;
+        this.valorServico = valorServico;
+        this.cliente = cliente;
     }
 
-    public void setNomeServico(ServicoEnum nomeServico) {
-        this.nomeServico = nomeServico;
+    public Servico getNome() {
+        return nome;
+    }
+
+    public void setNome(Servico nome) {
+        this.nome = nome;
     }
 
     public double getValorServico() {
@@ -24,5 +33,22 @@ public class ServicoDto {
 
     public void setValorServico(double valorServico) {
         this.valorServico = valorServico;
+    }
+
+    public ClienteDto getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteDto cliente) {
+        this.cliente = cliente;
+    }
+
+    @Override
+    public String toString() {
+        return "ServicoDto{" +
+                "nome=" + nome +
+                ", valorServico=" + valorServico +
+                ", cliente=" + cliente +
+                '}';
     }
 }

@@ -1,6 +1,7 @@
 package br.com.zup.Assessoria.Empresarial.funcionario;
 
 import br.com.zup.Assessoria.Empresarial.Exception.ClienteNaoEncontradoException;
+import br.com.zup.Assessoria.Empresarial.Exception.FuncionarioNaoEncontradoException;
 import br.com.zup.Assessoria.Empresarial.cliente.ClienteDto;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +32,7 @@ public class FuncionarioService {
             return funcionarioDto;
         }
 
-        throw new ClienteNaoEncontradoException("Funionario não encontrado");
+        throw new FuncionarioNaoEncontradoException("Funionario não encontrado");
     }
 
     public void removerFuncionarioDaLista(String nome){

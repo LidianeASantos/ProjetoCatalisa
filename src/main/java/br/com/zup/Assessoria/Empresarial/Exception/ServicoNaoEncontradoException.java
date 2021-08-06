@@ -4,4 +4,5 @@ public class ServicoNaoEncontradoException extends RuntimeException {
 
     public ServicoNaoEncontradoException(String message) {
     }
-}
+
+    }

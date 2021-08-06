@@ -16,6 +16,7 @@ public class Clientecontroller {
 
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public List<ClienteDto> cadastrarCliente(@RequestBody @Valid ClienteDto clienteDto){
         clienteService.adicionarClienteNaLista( clienteDto );
         return clienteService.retornarCliente();

@@ -1,6 +1,6 @@
 package br.com.zup.Assessoria.Empresarial.servico;
 
-public enum ServicoEnum {
+public enum Servico {
 
     IRRF,
     FOLHADEPAGAMENTO,

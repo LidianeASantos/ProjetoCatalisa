@@ -14,8 +14,6 @@ public class ClienteDto extends Pessoa {
     @NotBlank
     private String funcionarioResponsavel;
 
-    private ServicoDto servico;
-
 
     public ClienteDto(String nome, String endereco, String email, String telefone, Atividade atividade,
                       String descricao, String funcionarioResponsavel) {
@@ -39,6 +37,7 @@ public class ClienteDto extends Pessoa {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+
     }
 
     public String getFuncionarioResponsavel() {
@@ -47,5 +46,14 @@ public class ClienteDto extends Pessoa {
 
     public void setFuncionarioResponsavel(String funcionarioResponsavel) {
         this.funcionarioResponsavel = funcionarioResponsavel;
+    }
+
+    @Override
+    public String toString() {
+        return "ClienteDto{" +
+                "atividade=" + atividade +
+                ", descricao='" + descricao + '\'' +
+                ", funcionarioResponsavel='" + funcionarioResponsavel + '\'' +
+                '}';
     }
 }
